@@ -248,4 +248,6 @@ def update(selected, period_range):
     return stat_cards,fig3d,fig2d,figbar,fighist,figorbit
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8050)
+    import os
+port = int(os.environ.get("PORT", 8050))
+app.run(debug=False, host="0.0.0.0", port=port)
